@@ -88,7 +88,7 @@ beerChild.addEventListener('click', e => {
 
 //POST
 
-fetch('http://localhost:3000/beers', {
+fetch('https://my-json-server.typicode.com/wanjirumuigai/demo', {
     method: "POST",
     headers: {
         'Content-type': 'application/json'
