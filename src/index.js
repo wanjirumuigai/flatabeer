@@ -88,19 +88,20 @@ beerChild.addEventListener('click', e => {
 
 //POST
 
-fetch('https://my-json-server.typicode.com/wanjirumuigai/flatabeer/beers', {
-    method: "POST",
-    headers: {
-        'Content-type': 'application/json'
-    },
-body: JSON.stringify ( {
-    "reviews": [
-        "old review",
-        "new review"
-      ]
-    }
-)
-})
-.then(res => res.json())
-.then(data => data)
-.catch(error => console.log(error))
+
+// fetch('https://my-json-server.typicode.com/wanjirumuigai/flatabeer/beers'), {
+//     method: "POST",
+//     headers: {
+//         'Content-type': 'application/json'
+//     },
+// body: JSON.stringify ( {
+//     "reviews": [
+//         "old review",
+//         "new review"
+//       ]
+//     }
+// )
+// })
+// .then(res => res.json())
+// .then(data => data)
+// .catch(error => console.log(error))
