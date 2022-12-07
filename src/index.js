@@ -1,4 +1,4 @@
-fetch('http://localhost:3000/beers').then((response) => {
+fetch('https://my-json-server.typicode.com/wanjirumuigai/flatabeer/beers').then((response) => {
     console.log('resolved', response);
     return response.json();
 }).then(data => {
