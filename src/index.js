@@ -3,6 +3,7 @@ fetch('https://my-json-server.typicode.com/wanjirumuigai/flatabeer/beers').then(
     return response.json();
 }).then(data => {
     //get details the first beer from server
+    
     document.getElementById("beer-name").textContent=data[0].name; 
     document.getElementById("beer-image").src=data[0].image_url 
     document.getElementById("beer-description").textContent =data[0].description
@@ -15,7 +16,7 @@ fetch('https://my-json-server.typicode.com/wanjirumuigai/flatabeer/beers').then(
     });
     
     //replace reviews    
-        const serverReviews = data[0].reviews // get an reviews array from server 
+        const serverReviews = data[0].reviews // get reviews array from server 
         document.getElementById("review-list").innerHTML = ""; //delete the sample reviews from the html doc
         for (let i=0; i<serverReviews.length; i++) {    //loop through the reviews array and add the reviews to the html doc
             const markup = `<li>${serverReviews[i]}</li>`
@@ -64,7 +65,7 @@ const list= document.querySelector("#review-list")
  form.addEventListener('submit', e => {
     e.preventDefault(); //prevents page reloading
     const toAdd = review.value.trim() //trims off empty space
-    if (toAdd.length) { //ensure there at least one character typre
+    if (toAdd.length) { //ensure there at least one character typed
     addContent(toAdd);
     form.reset()
     }
@@ -77,31 +78,6 @@ list.addEventListener('click', function(e) {
   this.removeChild(e.target);
 });
 
-// beer list 
-beerList = document.getElementById('beer-list')
-beerChild = beerList.children;
-
-beerChild.addEventListener('click', e => {
-
-})
 
 
-//POST
 
-
-// fetch('https://my-json-server.typicode.com/wanjirumuigai/flatabeer/beers'), {
-//     method: "POST",
-//     headers: {
-//         'Content-type': 'application/json'
-//     },
-// body: JSON.stringify ( {
-//     "reviews": [
-//         "old review",
-//         "new review"
-//       ]
-//     }
-// )
-// })
-// .then(res => res.json())
-// .then(data => data)
-// .catch(error => console.log(error))
